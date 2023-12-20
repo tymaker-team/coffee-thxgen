@@ -20,3 +20,16 @@ jobs:
       with:
         name: Linux
         path: Thxgen.class
+  macOS:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build
+      run: javac Thxgen.java
+    - name: Upload
+      uses: actions/upload-artifact@v4
+      with:
+        name: macOS
+        path: Thxgen.class
